@@ -1,0 +1,7 @@
+/*
+	borders
+*/
+@mixin border-soft($size: 5px) {
+	border: 1px solid $colour--secondary;
+	box-shadow: 0 0 $size $colour--secondary;
+}

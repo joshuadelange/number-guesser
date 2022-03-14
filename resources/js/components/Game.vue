@@ -3,7 +3,9 @@
 
         <button>New Game</button>
 
-        <Player v-for="index in number_of_players" :key="index" />
+        <div class="players">
+            <Player v-for="index in number_of_players" :key="index" />
+        </div>
 
     </div>
 </template>
@@ -12,8 +14,6 @@
     import Player from './Player.vue'
 
     export default {
-        mounted() {
-        },
         data() {
             return {
                 game_id: null,
@@ -23,3 +23,9 @@
 
     }
 </script>
+
+<style lang="scss">
+    .players {
+        display: flex;
+    }
+</style>

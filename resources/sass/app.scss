@@ -1,8 +1,10 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
 @import 'variables';
+@import 'mixins';
+@import 'button';
+@import 'form';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+body {
+  background: $colour--tertiary;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}

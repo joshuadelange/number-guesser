@@ -1,0 +1,14 @@
+label {
+	font-size: 1.2rem;
+}
+
+input[type="text"] {
+
+	padding: $gutter--half $gutter;
+	background: $colour--primary;
+
+	border: 1px solid $colour--secondary;
+
+	font-size: 1.2rem;
+
+}
