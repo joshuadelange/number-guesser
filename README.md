@@ -1,5 +1,4 @@
-# number guesser!
-## ❓🔢❓🔢
+# number guesser! 🔢❓🔢
 
 - to start the server
 `php artisan serve`
