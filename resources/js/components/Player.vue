@@ -40,6 +40,10 @@
     .player {
 
         flex: 1 1 0;
+        min-width: 220px;
+        @media(max-width: 825px) {
+            flex-grow: 2;
+        }
 
         margin: $gutter;
         padding: $gutter;

@@ -51,6 +51,9 @@
 
     .players {
         display: flex;
+        @media(max-width: 825px) {
+            flex-wrap: wrap;
+        }
     }
 
     button {

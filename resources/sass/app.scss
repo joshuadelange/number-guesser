@@ -3,6 +3,10 @@
 @import 'button';
 @import 'form';
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: $colour--tertiary;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
