@@ -11,22 +11,24 @@ class GameController extends Controller
 {
 
     public function new(){
+
         $game = new Game;
         $game->number = rand(0, 100);
         $game->save();
 
         return response()->json(array('game_id' => $game->id));
+
     }
 
-    public function guess(Request $request, $game_id){
+    public function guess(Request $request){
 
-        $game = Game::findOrFail($game_id);
+        $game = Game::findOrFail($request->input('game_id'));
 
         $guess = new Guess($request->input('guess'), $game->number);
 
         return response()->json(array(
             'message' => $guess->get_message(),
-            'game_id' => $game_id
+            'game_id' => $game->id
         ));
 
     }

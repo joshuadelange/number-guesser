@@ -20,4 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/games/new', [GameController::class, 'new']);
-Route::post('/games/{game_id}/guess', [GameController::class, 'guess']);
+Route::post('/games/guess', [GameController::class, 'guess']);

@@ -73,7 +73,7 @@ body {
 /*
 	borders
 */
-button {
+button[data-v-3a2c79dd] {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
@@ -82,26 +82,31 @@ button {
   background: white;
   border: 1px solid #bfbfbf;
 }
-button:hover {
+button[data-v-3a2c79dd]:hover {
   background: #bfbfbf;
   color: white;
 }
-label {
+label[data-v-3a2c79dd] {
   font-size: 1.2rem;
 }
-input[type=text] {
+input[type=text][data-v-3a2c79dd] {
   padding: 12.5px 25px;
   background: white;
   border: 1px solid #bfbfbf;
   font-size: 1.2rem;
 }
-body {
+body[data-v-3a2c79dd] {
   background: #dadada;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
 }
-.players {
+.players[data-v-3a2c79dd] {
   display: flex;
+}
+button[data-v-3a2c79dd] {
+  display: block;
+  width: 200px;
+  margin: 25px auto;
 }
 /*
 	borders
@@ -133,6 +138,8 @@ body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
 }
-.players {
-  display: flex;
+.guesses button {
+  margin: -1px;
+  padding: 5px;
+  width: 31px;
 }

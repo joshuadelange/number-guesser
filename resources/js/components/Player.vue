@@ -3,16 +3,17 @@
 
         <PlayerAuthenticate @player-authenticated="authenticate_player($event)" v-if="player == null" />
 
-        <Guess v-if="player != null" :player_name="player" />
+        <Guess :game_id="game_id" v-if="player != null" :player_name="player" />
         
     </div>
 </template>
 
 <script>
     export default {
+        props: ['game_id'],
         data() {
             return {
-                player: null
+                player: 'test'
             }
         },
         methods: {
