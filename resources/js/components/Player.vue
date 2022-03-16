@@ -1,19 +1,30 @@
 <template>
     <div class="player">
 
-        <PlayerAuthenticate @player-authenticated="authenticate_player($event)" v-if="player == null" />
+        <PlayerAuthenticate
+            v-if="player == null" 
+            @player-authenticated="authenticate_player($event)"
+        />
 
-        <Guess :game_id="game_id" v-if="player != null" :player_name="player" />
+        <Guess
+            v-if="player != null && game_winner == null"
+            :game_id="game_id"
+            :player_name="player"
+            @game-won="(player_name) => this.$emit('game-won', player_name)" 
+        />
+
+        <p v-if="game_winner != null && game_winner != player">You lost! {{game_winner}} won the game.</p>
+        <p v-if="game_winner != null && game_winner == player">You won! 🎉🎈</p>
         
     </div>
 </template>
 
 <script>
     export default {
-        props: ['game_id'],
+        props: ['game_id', 'game_winner'],
         data() {
             return {
-                player: 'test'
+                player: null
             }
         },
         methods: {

@@ -14,10 +14,7 @@
 
         </div>
 
-        <p v-if="message">
-            {{message | titleize}}!
-            <span v-if="message == 'correct'">🎉🎈</span>
-        </p>
+        <p v-if="message">{{message | titleize}}!</p>
 
     </div>
 </template>
@@ -42,6 +39,11 @@
             }
         },
         methods: {
+            evaluate_win() {
+                if(this.message == 'correct') {
+                    this.$emit('game-won', this.player_name);
+                }
+            },
             set_hints(guessed_number){
 
                 if(this.message == 'lower' || this.message == 'correct') this.hint_max = guessed_number
@@ -55,6 +57,7 @@
                 }).then((response) => {
                     this.message = response.data.message
                     this.set_hints(guessed_number);
+                    this.evaluate_win();
                 });
             }
         }
