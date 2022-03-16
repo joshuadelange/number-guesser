@@ -1,7 +1,8 @@
 /*
 	borders
 */
-button {
+button,
+input[type=submit] {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
@@ -10,7 +11,8 @@ button {
   background: white;
   border: 1px solid #bfbfbf;
 }
-button:hover {
+button:hover,
+input[type=submit]:hover {
   background: #bfbfbf;
   color: white;
 }
@@ -34,7 +36,8 @@ body {
 /*
 	borders
 */
-button {
+button,
+input[type=submit] {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
@@ -43,7 +46,8 @@ button {
   background: white;
   border: 1px solid #bfbfbf;
 }
-button:hover {
+button:hover,
+input[type=submit]:hover {
   background: #bfbfbf;
   color: white;
 }
@@ -73,7 +77,8 @@ body {
 /*
 	borders
 */
-button[data-v-3a2c79dd] {
+button[data-v-3a2c79dd],
+input[type=submit][data-v-3a2c79dd] {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
@@ -82,7 +87,8 @@ button[data-v-3a2c79dd] {
   background: white;
   border: 1px solid #bfbfbf;
 }
-button[data-v-3a2c79dd]:hover {
+button[data-v-3a2c79dd]:hover,
+input[type=submit][data-v-3a2c79dd]:hover {
   background: #bfbfbf;
   color: white;
 }
@@ -111,7 +117,8 @@ button[data-v-3a2c79dd] {
 /*
 	borders
 */
-button {
+button,
+input[type=submit] {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
@@ -120,7 +127,8 @@ button {
   background: white;
   border: 1px solid #bfbfbf;
 }
-button:hover {
+button:hover,
+input[type=submit]:hover {
   background: #bfbfbf;
   color: white;
 }

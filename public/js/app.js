@@ -2375,6 +2375,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -3107,7 +3109,7 @@ var render = function () {
   return _c("div", { staticClass: "game" }, [
     _c("p", [_vm._v("Hi " + _vm._s(_vm.player_name) + "!")]),
     _vm._v(" "),
-    _c("h2", [_vm._v(" Make a guess:")]),
+    _c("h2", [_vm._v("Make a guess:")]),
     _vm._v(" "),
     _c(
       "div",
@@ -3220,32 +3222,34 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "player--authenticate" }, [
-    _c("label", { attrs: { for: "player-name" } }, [
-      _vm._v("What is your name?"),
+    _c("form", { on: { submit: _vm.authenticate } }, [
+      _c("label", { attrs: { for: "player-name" } }, [
+        _vm._v("What is your name?"),
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.name,
+            expression: "name",
+          },
+        ],
+        attrs: { id: "player-name", type: "text" },
+        domProps: { value: _vm.name },
+        on: {
+          input: function ($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.name = $event.target.value
+          },
+        },
+      }),
+      _vm._v(" "),
+      _c("input", { attrs: { type: "submit", value: "Play" } }),
     ]),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.name,
-          expression: "name",
-        },
-      ],
-      attrs: { id: "player-name", type: "text" },
-      domProps: { value: _vm.name },
-      on: {
-        input: function ($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.name = $event.target.value
-        },
-      },
-    }),
-    _vm._v(" "),
-    _c("button", { on: { click: _vm.authenticate } }, [_vm._v("Play")]),
   ])
 }
 var staticRenderFns = []

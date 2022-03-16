@@ -1,9 +1,11 @@
 <template>
     <div class="player--authenticate">
 
-        <label for="player-name">What is your name?</label>
-        <input id="player-name" type="text" v-model="name" />
-        <button @click="authenticate">Play</button>
+        <form @submit="authenticate">
+            <label for="player-name">What is your name?</label>
+            <input id="player-name" type="text" v-model="name" />
+            <input type="submit" value="Play" />
+        </form>
         
     </div>
 </template>

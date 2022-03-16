@@ -2,7 +2,7 @@
     <div class="game">
 
         <p>Hi {{player_name}}!</p>
-        <h2> Make a guess:</h2>
+        <h2>Make a guess:</h2>
 
         <div class="guesses">
 
